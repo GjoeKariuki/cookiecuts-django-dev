@@ -1,0 +1,33 @@
+template options explanation
+
+project_name: human readable name(capital letters, spaces allowed)
+project_slug: used to name repo and project(no spaces allowed)
+description: project description, used in README.rst
+author_name: this is you, used in places like LICENSE
+email: email address to identify yourself in the project
+username_type: email or username used for login purposes
+domain_name: project domain name once it goes live (later it can be safely changed whether you need or not)
+version: project version at inception
+open_source_license:
+timezone: project TIME_ZONE settings
+windows: should the project be configured for development on windows
+editor: choice editor
+use_docker: should the project be configured with docker, docker compose, devcontainer
+postgresql_version: postgreSQL version
+cloud_provider: cloud provider for static & media files( if you choose no provider and docker, the production stack will serve the media files via
+an nginx docker service, without docker the media files won't work)
+mail_service:
+use_async: should the project use websockets with Uvicorn + Gunicorn
+use_drf: use django rest framework
+frontend_pipeline: pipeline to compile and optimise frontend assets(JS,CSS)(both gulp and webpack support Bootstrap recompilation with real-time variables alteration)
+use_celery: use Celery?
+use_mailpit: use mailpit
+use_sentry: use Sentry
+use_whitenoise: use Whitenoise
+use_heroku: heroku deployable
+ci_tool: CI tool for running tests
+keep_local_envs_in_vcs: indicates whether the project's .envs/.local/ should be kept in VCS(
+    comes in handy when working in teams where local environment reproducibility is strongly encouraged.
+    .env(s) are only utilized when Docker compose & / Heroku support is enabled.
+)
+debug: relevant for Cookiecutter Django developers only
